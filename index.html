@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- /* 
+Bernard Williams
+UCF Bootcamp APR2017 Week 3
+Hangman Game
+*/ -->
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bernard L. Williams - Hangman Game</title>
+    <link href="assets/css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body onload="getNewWord();">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Bernard L. Williams</a>
+            </div>
+            <ul class="nav navbar-nav">
+
+                <li><a href='index.html' class="active">Lets Play Hangman</a></li>
+                <li><a href="instructions.html">Instructions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container bottomPadding">
+        <!-- Header Row -->
+        <div class="row">
+            <div class="col-md-12">
+                <img src="assets/images/hangman-logo.png" class="img-responsive" alt="Hangman Logo" id='logo'>
+                <p>A politically correct version of a classic game.</p>
+            </div>
+        </div>
+        <!-- Main Content Area Row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3>Can you guess this word?</h3>
+
+                    </div>
+                    <div class="panel-footer">Current Status: </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3>Your Performance Metrics</h3>
+                    </div>
+                    <div class="panel-footer">Overall Average:</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <p>Copyright 2017 Bernard L. Williams. All Rights Reserved</p>
+    </footer>
+    <script src="assets/css/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="assets/javascript/games.js"></script>
+    <script src="assets/javascript/config.js"></script>
+</body>
+
+</html>

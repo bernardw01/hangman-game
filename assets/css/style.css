@@ -1,0 +1,52 @@
+.mainHeader {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: slategray;
+}
+
+div.sideBarHeader {
+    font-size: large;
+        border-bottom: 2px solid slategray;
+    font-weight: bold;
+        margin-bottom: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+div.sideBar {
+       color: #777777; 
+       color: ;
+    text-align: center;
+
+}
+
+#contactLink {
+    height: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+a {
+    text-decoration: none;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.bottomPadding {
+    padding-bottom: 60px;
+}
+
+#logo {
+    max-height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
