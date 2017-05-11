@@ -7,8 +7,8 @@ Hangman Game
 // I grabbed my word ideas from https://www.prdaily.com/Main/Articles/20880.aspx
 
 
-//Settings to export
-exports.getConfig = function() {
+//Settings to expose to the app are listed below
+function getConfig(itemNum) {
   var config = {
     words: [
       {
