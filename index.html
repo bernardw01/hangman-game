@@ -10,6 +10,7 @@ Hangman Game
     <meta charset=utf-8>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
     <title>Bernard L. Williams - Hangman Game</title>
     <link href="assets/css/reset.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -19,7 +20,7 @@ Hangman Game
 
 </head>
 
-<body onload="getNewWord();">
+<body onload="gameInit();">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -46,22 +47,32 @@ Hangman Game
             <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h3>Can you guess this word?</h3><BR/>
-                        <P>Hint: </p><<script>
-                            config.words[]
-                        </script>
-
+                        <h3>Can you guess this word?</h3>
+                        <BR/>
+                        <img src="assets/images/hangman-1.png" class="img-responsive" alt="Hangman Logo" id='hangManState'>
+                        <P>
+                            <div class="alert alert-info theWord" role="alert">
+                                <span class="theWord" id="theWord"></span>
+                            </div>
+                            <h4>Hint:</h4> <span id="wordHint"></span>
+                        </p>
 
                     </div>
-                    <div class="panel-footer">Current Status: </div>
+                    <div class="panel-footer">
+                        <h4>Previous Choices:</h4>
+                        <span id="prevChoices"></span>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-body">
+                        <P>
+                            <h4>Instructions:</h4> <span id="instructions"></span> </p>
                         <h3>Your Performance Metrics</h3>
+                        <span id="perfMetrics"></span>
                     </div>
-                    <div class="panel-footer">Overall Average:</div>
+                    <div class="panel-footer">Overall Average: <span id="overallAvg"></span></div>
                 </div>
             </div>
         </div>

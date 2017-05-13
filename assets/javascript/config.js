@@ -6,7 +6,6 @@ Hangman Game
 
 // I grabbed my word ideas from https://www.prdaily.com/Main/Articles/20880.aspx
 
-
 //Settings to expose to the app are listed below
 function getConfig(itemNum) {
   var config = {
@@ -23,15 +22,15 @@ function getConfig(itemNum) {
         word: "Oxygen",
         hint: "This element puts the O in O2"
       },
-            {
+      {
         word: "Yacht",
         hint: "Its bigger than a boat and smaller than a ship."
       },
-            {
+      {
         word: "Zombie",
         hint: "This late night muncher loves smart people with brains."
       }
     ]
   };
   return config;
-};
+}

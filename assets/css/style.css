@@ -50,3 +50,16 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+#hangManState {
+    max-height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.theWord {
+    text-align: center;
+    font-size: x-large;
+    color: black;
+    letter-spacing: 15px;
+
+}
