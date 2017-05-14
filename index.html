@@ -17,7 +17,6 @@ Hangman Game
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.min.css">
     <link href="assets/css/style.css" rel="stylesheet">
-
 </head>
 
 <body onload="gameInit();">
@@ -70,7 +69,9 @@ Hangman Game
                         <P>
                             <h4>Instructions:</h4> <span id="instructions"></span> </p>
                         <h3>Your Performance Metrics</h3>
-                        <span id="perfMetrics"></span>
+                        Count Right: <span id="countRight"></span><br/>
+                        Count Wrong: <span id="countWrong"></span><br/>
+                        Count Remaining: <span id="contRemaining"></span><br/>
                     </div>
                     <div class="panel-footer">Overall Average: <span id="overallAvg"></span></div>
                 </div>
@@ -82,8 +83,8 @@ Hangman Game
         <p>Copyright 2017 Bernard L. Williams. All Rights Reserved</p>
     </footer>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="assets/javascript/games.js"></script>
