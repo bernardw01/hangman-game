@@ -71,10 +71,8 @@ function gameInit() {
     displayArray.push("-");
   }
   txtTheWord.textContent = displayArray.join("");
+  wordLength = displayArray.length;
 }
-
-//this function resets the graphics on the game board
-function resetGameBoard() {}
 
 //This code listens to key press events and calls the choice handler.
 document.onkeyup = function(event) {
@@ -84,7 +82,7 @@ document.onkeyup = function(event) {
   console.log(userGuess);
   console.log("------------------------------------");
 
-  if (!blnYouLost) {
+  if (!blnYouLost || blnWinner) {
     handleChoice(userGuess);
   }
 };
@@ -93,6 +91,7 @@ document.onkeyup = function(event) {
 function handleChoice(userGuess) {
   //check to see if the user has already selected this letter
   if (prevChoices.indexOf(userGuess) < 0) {
+
     //Add the choice to the previously selected list and display
     prevChoices.push(userGuess);
     txtPrevChoices.textContent += userGuess + " ";
@@ -102,6 +101,18 @@ function handleChoice(userGuess) {
     if (checkChoice(userGuess)) {
       countRight++;
       txtCountRight.textContent = countRight;
+
+      //Did we get all of the letters?
+      if (displayArray.indexOf('-')<0) {
+        blnWinner = true;
+        txtInstructions.textContent =
+          "Congratulations on your win!! Please reload the page to reset the game.";
+        //Change the image based on the state of the current game
+        imgHangManState.setAttribute(
+          "src",
+          "assets/images/ChuckNorrisThumpsUp.gif"
+        );
+      }
     } else {
       //If the user guesses a wrong answer increment the wrong answer count and change the image
       countWrong++;
