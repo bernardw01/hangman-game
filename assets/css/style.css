@@ -61,3 +61,8 @@ a {
     color: black;
     letter-spacing: 15px;
 }
+
+.perfLabel {
+    font-size: x-large; 
+    height: 30px;   
+}

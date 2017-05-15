@@ -102,7 +102,8 @@ function handleChoice(userGuess) {
       countWrong++;
       txtCountWrong.textContent = countWrong;
       imgHangManState.setAttribute("src", "assets/images/hangman-" + (countWrong + 1) + ".png");
-    }
+    
+  }
 
     
   }
