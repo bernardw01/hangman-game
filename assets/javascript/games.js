@@ -32,6 +32,8 @@ var theCurrentWord = "";
 var countRight = 0;
 var countWrong = 0;
 var countRemaining = 6;
+var blnWinner = false;
+var blnYouLost = false;
 
 //This function returns a new word from the config.js file.
 function getNewWord() {
@@ -81,7 +83,10 @@ document.onkeyup = function(event) {
   console.log("-----------Key Up Event--------------------");
   console.log(userGuess);
   console.log("------------------------------------");
-  handleChoice(userGuess);
+
+  if (!blnYouLost) {
+    handleChoice(userGuess);
+  }
 };
 
 //This code handles the response that the user has typed in and checks to see if it is accurate
@@ -101,11 +106,24 @@ function handleChoice(userGuess) {
       //If the user guesses a wrong answer increment the wrong answer count and change the image
       countWrong++;
       txtCountWrong.textContent = countWrong;
-      imgHangManState.setAttribute("src", "assets/images/hangman-" + (countWrong + 1) + ".png");
-    
-  }
+      countRemaining--;
+      txtCountRemaining.textContent = countRemaining;
 
-    
+      //Check to see if the user has lost the game
+      if (countRemaining === 0) {
+        blnYouLost = true;
+        txtInstructions.textContent =
+          "Please reload the page to reset the game.";
+        //Change the image based on the state of the current game
+        imgHangManState.setAttribute("src", "assets/images/game_over.gif");
+      } else {
+        //Change the image based on the state of the current game
+        imgHangManState.setAttribute(
+          "src",
+          "assets/images/hangman-" + (countWrong + 1) + ".png"
+        );
+      }
+    }
   }
 }
 
@@ -124,6 +142,11 @@ function checkChoice(userGuess) {
     rightChoice = true;
     displayArray[idx] = userGuess;
     idx = wordArray.indexOf(userGuess, idx + 1);
+  }
+
+  //Set the "We have a winner" flag when the right answer has been guessed
+  if (displayArray.indexOf("-") < 0) {
+    blnWinner = true;
   }
 
   txtTheWord.textContent = displayArray.join("");

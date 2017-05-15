@@ -64,5 +64,6 @@ a {
 
 .perfLabel {
     font-size: x-large; 
-    height: 30px;   
+    height: 30px;
+    width: 65px;   
 }
