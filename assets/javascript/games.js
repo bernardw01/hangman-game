@@ -127,6 +127,7 @@ function handleChoice(userGuess) {
           "Please reload the page to reset the game.";
         //Change the image based on the state of the current game
         imgHangManState.setAttribute("src", "assets/images/game_over.gif");
+         txtTheWord.textContent = theCurrentWord;
       } else {
         //Change the image based on the state of the current game
         imgHangManState.setAttribute(
