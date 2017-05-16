@@ -29,6 +29,14 @@ function getConfig(itemNum) {
       {
         word: "zombie",
         hint: "This late night muncher loves smart people with brains."
+      },
+      {
+        word: "jiffy",
+        hint: "This brand of cornbread gets made really quick."
+      },
+      {
+        word: "ivory",
+        hint: "Its a soap and what an elephant tusk is made of."
       }
     ]
   };
