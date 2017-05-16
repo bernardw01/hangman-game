@@ -20,7 +20,7 @@ function getConfig(itemNum) {
       },
       {
         word: "oxygen",
-        hint: "This element puts the O in O2"
+        hint: "This element puts the O in O2 and its a channel that real men shouldn't watch.  Unless your married and you are whipped."
       },
       {
         word: "yacht",
