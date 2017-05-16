@@ -82,7 +82,7 @@ document.onkeyup = function(event) {
   console.log(userGuess);
   console.log("------------------------------------");
 
-  if (!blnYouLost || blnWinner) {
+  if (!blnYouLost || !blnWinner) {
     handleChoice(userGuess);
   }
 };
