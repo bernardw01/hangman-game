@@ -80,9 +80,12 @@ document.onkeyup = function(event) {
   var userGuess = event.key;
   console.log("-----------Key Up Event--------------------");
   console.log(userGuess);
+  console.log('blnWinner ' + blnWinner);
+  console.log('blnYouLose ' + blnYouLost);
+  
   console.log("------------------------------------");
 
-  if (!blnYouLost || !blnWinner) {
+  if (!blnYouLost && !blnWinner) {
     handleChoice(userGuess);
   }
 };
@@ -91,7 +94,6 @@ document.onkeyup = function(event) {
 function handleChoice(userGuess) {
   //check to see if the user has already selected this letter
   if (prevChoices.indexOf(userGuess) < 0) {
-
     //Add the choice to the previously selected list and display
     prevChoices.push(userGuess);
     txtPrevChoices.textContent += userGuess + " ";
@@ -103,7 +105,7 @@ function handleChoice(userGuess) {
       txtCountRight.textContent = countRight;
 
       //Did we get all of the letters?
-      if (displayArray.indexOf('-')<0) {
+      if (displayArray.indexOf("-") < 0) {
         blnWinner = true;
         txtInstructions.textContent =
           "Congratulations on your win!! Please reload the page to reset the game.";
@@ -127,7 +129,7 @@ function handleChoice(userGuess) {
           "Please reload the page to reset the game.";
         //Change the image based on the state of the current game
         imgHangManState.setAttribute("src", "assets/images/game_over.gif");
-         txtTheWord.textContent = theCurrentWord;
+        txtTheWord.textContent = theCurrentWord;
       } else {
         //Change the image based on the state of the current game
         imgHangManState.setAttribute(
