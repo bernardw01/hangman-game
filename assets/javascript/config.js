@@ -37,6 +37,10 @@ function getConfig(itemNum) {
       {
         word: "ivory",
         hint: "Its a soap and what an elephant tusk is made of."
+      },
+      {
+        word: "romeo",
+        hint: "This Shakesperean lover should think twice before dating 13 year old girls.  They just crazy.  It killed him"
       }
     ]
   };
